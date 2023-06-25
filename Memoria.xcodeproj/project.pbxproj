@@ -8,17 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		D412D45A2A4828010026E164 /* MemoriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4592A4828010026E164 /* MemoriaApp.swift */; };
-		D412D45C2A4828010026E164 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D45B2A4828010026E164 /* ContentView.swift */; };
 		D412D45E2A4828020026E164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D412D45D2A4828020026E164 /* Assets.xcassets */; };
 		D412D4612A4828020026E164 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D412D4602A4828020026E164 /* Preview Assets.xcassets */; };
+		D412D4682A4834EC0026E164 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4672A4834EC0026E164 /* WelcomeView.swift */; };
+		D412D46C2A4840150026E164 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D412D46B2A4840130026E164 /* Inter-Regular.ttf */; };
+		D412D4722A48416E0026E164 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4712A48416E0026E164 /* LargeButton.swift */; };
+		D412D4752A4842300026E164 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4742A4842300026E164 /* Color.swift */; };
+		D412D4772A4842D70026E164 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D412D4762A4842D60026E164 /* Inter-Medium.ttf */; };
+		D412D47B2A4842E10026E164 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D412D4782A4842E00026E164 /* Inter-ExtraBold.ttf */; };
+		D412D47C2A4842E10026E164 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D412D4792A4842E10026E164 /* Inter-Black.ttf */; };
+		D412D47D2A4842E10026E164 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D412D47A2A4842E10026E164 /* Inter-Bold.ttf */; };
+		D412D47F2A4842FB0026E164 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D412D47E2A4842FB0026E164 /* Inter-Thin.ttf */; };
+		D412D4822A4845520026E164 /* NavigationBackport in Frameworks */ = {isa = PBXBuildFile; productRef = D412D4812A4845520026E164 /* NavigationBackport */; };
+		D412D4862A485EC50026E164 /* AppStateNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4852A485EC50026E164 /* AppStateNavigation.swift */; };
+		D412D48B2A4864270026E164 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D48A2A4864270026E164 /* OnboardingView.swift */; };
+		D412D48D2A486CFC0026E164 /* ImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D48C2A486CFC0026E164 /* ImageTextField.swift */; };
+		D412D48F2A4876210026E164 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D412D48E2A4876210026E164 /* Inter-SemiBold.ttf */; };
+		D412D4912A48768F0026E164 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4902A48768F0026E164 /* LoadingView.swift */; };
+		D412D4932A4877290026E164 /* MemoriaLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4922A4877290026E164 /* MemoriaLogo.swift */; };
+		D412D4952A48780E0026E164 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4942A48780E0026E164 /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D412D4562A4828010026E164 /* Memoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memoria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D412D4592A4828010026E164 /* MemoriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriaApp.swift; sourceTree = "<group>"; };
-		D412D45B2A4828010026E164 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D412D45D2A4828020026E164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D412D4602A4828020026E164 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D412D4672A4834EC0026E164 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		D412D46B2A4840130026E164 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		D412D46F2A4840780026E164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D412D4712A48416E0026E164 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
+		D412D4742A4842300026E164 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D412D4762A4842D60026E164 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		D412D4782A4842E00026E164 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D412D4792A4842E10026E164 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		D412D47A2A4842E10026E164 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		D412D47E2A4842FB0026E164 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		D412D4852A485EC50026E164 /* AppStateNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateNavigation.swift; sourceTree = "<group>"; };
+		D412D48A2A4864270026E164 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D412D48C2A486CFC0026E164 /* ImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextField.swift; sourceTree = "<group>"; };
+		D412D48E2A4876210026E164 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		D412D4902A48768F0026E164 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D412D4922A4877290026E164 /* MemoriaLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriaLogo.swift; sourceTree = "<group>"; };
+		D412D4942A48780E0026E164 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D412D4822A4845520026E164 /* NavigationBackport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +84,10 @@
 		D412D4582A4828010026E164 /* Memoria */ = {
 			isa = PBXGroup;
 			children = (
+				D412D46D2A48402B0026E164 /* Module */,
+				D412D4692A4835AE0026E164 /* Vendor */,
 				D412D4592A4828010026E164 /* MemoriaApp.swift */,
-				D412D45B2A4828010026E164 /* ContentView.swift */,
+				D412D46F2A4840780026E164 /* Info.plist */,
 				D412D45D2A4828020026E164 /* Assets.xcassets */,
 				D412D45F2A4828020026E164 /* Preview Content */,
 			);
@@ -65,6 +100,84 @@
 				D412D4602A4828020026E164 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D412D4692A4835AE0026E164 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D412D4832A4845D20026E164 /* NavigationState */,
+				D412D4732A4842270026E164 /* Extension */,
+				D412D4702A48413A0026E164 /* CustomView */,
+				D412D46A2A4835BC0026E164 /* Font */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		D412D46A2A4835BC0026E164 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				D412D4792A4842E10026E164 /* Inter-Black.ttf */,
+				D412D47A2A4842E10026E164 /* Inter-Bold.ttf */,
+				D412D48E2A4876210026E164 /* Inter-SemiBold.ttf */,
+				D412D4782A4842E00026E164 /* Inter-ExtraBold.ttf */,
+				D412D4762A4842D60026E164 /* Inter-Medium.ttf */,
+				D412D47E2A4842FB0026E164 /* Inter-Thin.ttf */,
+				D412D46B2A4840130026E164 /* Inter-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		D412D46D2A48402B0026E164 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D412D4872A485F800026E164 /* Onboarding */,
+				D412D46E2A4840360026E164 /* Welcome */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D412D46E2A4840360026E164 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				D412D4672A4834EC0026E164 /* WelcomeView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		D412D4702A48413A0026E164 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D412D4712A48416E0026E164 /* LargeButton.swift */,
+				D412D48C2A486CFC0026E164 /* ImageTextField.swift */,
+				D412D4922A4877290026E164 /* MemoriaLogo.swift */,
+				D412D4942A48780E0026E164 /* CircularProgressView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		D412D4732A4842270026E164 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D412D4742A4842300026E164 /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D412D4832A4845D20026E164 /* NavigationState */ = {
+			isa = PBXGroup;
+			children = (
+				D412D4852A485EC50026E164 /* AppStateNavigation.swift */,
+			);
+			path = NavigationState;
+			sourceTree = "<group>";
+		};
+		D412D4872A485F800026E164 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D412D48A2A4864270026E164 /* OnboardingView.swift */,
+				D412D4902A48768F0026E164 /* LoadingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +196,9 @@
 			dependencies = (
 			);
 			name = Memoria;
+			packageProductDependencies = (
+				D412D4812A4845520026E164 /* NavigationBackport */,
+			);
 			productName = Memoria;
 			productReference = D412D4562A4828010026E164 /* Memoria.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +227,9 @@
 				Base,
 			);
 			mainGroup = D412D44D2A4828010026E164;
+			packageReferences = (
+				D412D4802A4845520026E164 /* XCRemoteSwiftPackageReference "NavigationBackport" */,
+			);
 			productRefGroup = D412D4572A4828010026E164 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +244,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D412D47B2A4842E10026E164 /* Inter-ExtraBold.ttf in Resources */,
+				D412D47C2A4842E10026E164 /* Inter-Black.ttf in Resources */,
+				D412D4772A4842D70026E164 /* Inter-Medium.ttf in Resources */,
+				D412D48F2A4876210026E164 /* Inter-SemiBold.ttf in Resources */,
+				D412D47D2A4842E10026E164 /* Inter-Bold.ttf in Resources */,
+				D412D47F2A4842FB0026E164 /* Inter-Thin.ttf in Resources */,
 				D412D4612A4828020026E164 /* Preview Assets.xcassets in Resources */,
+				D412D46C2A4840150026E164 /* Inter-Regular.ttf in Resources */,
 				D412D45E2A4828020026E164 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +263,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D412D45C2A4828010026E164 /* ContentView.swift in Sources */,
+				D412D48D2A486CFC0026E164 /* ImageTextField.swift in Sources */,
+				D412D4682A4834EC0026E164 /* WelcomeView.swift in Sources */,
+				D412D4862A485EC50026E164 /* AppStateNavigation.swift in Sources */,
 				D412D45A2A4828010026E164 /* MemoriaApp.swift in Sources */,
+				D412D4932A4877290026E164 /* MemoriaLogo.swift in Sources */,
+				D412D48B2A4864270026E164 /* OnboardingView.swift in Sources */,
+				D412D4912A48768F0026E164 /* LoadingView.swift in Sources */,
+				D412D4752A4842300026E164 /* Color.swift in Sources */,
+				D412D4952A48780E0026E164 /* CircularProgressView.swift in Sources */,
+				D412D4722A48416E0026E164 /* LargeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,6 +404,7 @@
 				DEVELOPMENT_TEAM = L54R5L5GQL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Memoria/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +434,7 @@
 				DEVELOPMENT_TEAM = L54R5L5GQL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Memoria/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +475,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D412D4802A4845520026E164 /* XCRemoteSwiftPackageReference "NavigationBackport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/NavigationBackport";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D412D4812A4845520026E164 /* NavigationBackport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D412D4802A4845520026E164 /* XCRemoteSwiftPackageReference "NavigationBackport" */;
+			productName = NavigationBackport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D412D44E2A4828010026E164 /* Project object */;
 }

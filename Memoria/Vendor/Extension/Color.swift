@@ -11,6 +11,8 @@ extension Color {
     public static let purpleButton = Color(hex: "#6366F1")
     public static let blackAccent = Color(hex: "#171717")
     public static let whiteAccent = Color(hex: "#E5E5E5")
+    public static let blackBg = Color(hex: "#262626")
+    public static let softWhite = Color(hex: "#FAFAFA")
 }
 
 extension Color {

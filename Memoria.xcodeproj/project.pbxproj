@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4081F832A4FFC7900F19529 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = D4081F822A4FFC7900F19529 /* CodeScanner */; };
+		D4081F852A5007CA00F19529 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4081F842A5007CA00F19529 /* View.swift */; };
 		D412D45A2A4828010026E164 /* MemoriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4592A4828010026E164 /* MemoriaApp.swift */; };
 		D412D45E2A4828020026E164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D412D45D2A4828020026E164 /* Assets.xcassets */; };
 		D412D4612A4828020026E164 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D412D4602A4828020026E164 /* Preview Assets.xcassets */; };
@@ -27,9 +29,15 @@
 		D412D4912A48768F0026E164 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4902A48768F0026E164 /* LoadingView.swift */; };
 		D412D4932A4877290026E164 /* MemoriaLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4922A4877290026E164 /* MemoriaLogo.swift */; };
 		D412D4952A48780E0026E164 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4942A48780E0026E164 /* CircularProgressView.swift */; };
+		D44C81472A50141A008B52A4 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C81462A50141A008B52A4 /* BottomSheetView.swift */; };
+		D44C81492A501BED008B52A4 /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C81482A501BED008B52A4 /* ScanQRView.swift */; };
+		D44C814B2A5021DD008B52A4 /* JoinByCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C814A2A5021DD008B52A4 /* JoinByCodeView.swift */; };
+		D4922D952A49DAB300D274DC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4922D942A49DAB300D274DC /* MainView.swift */; };
+		D4922D972A49DAF700D274DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4922D962A49DAF700D274DC /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4081F842A5007CA00F19529 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		D412D4562A4828010026E164 /* Memoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memoria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D412D4592A4828010026E164 /* MemoriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriaApp.swift; sourceTree = "<group>"; };
 		D412D45D2A4828020026E164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +59,11 @@
 		D412D4902A48768F0026E164 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D412D4922A4877290026E164 /* MemoriaLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriaLogo.swift; sourceTree = "<group>"; };
 		D412D4942A48780E0026E164 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		D44C81462A50141A008B52A4 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		D44C81482A501BED008B52A4 /* ScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRView.swift; sourceTree = "<group>"; };
+		D44C814A2A5021DD008B52A4 /* JoinByCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinByCodeView.swift; sourceTree = "<group>"; };
+		D4922D942A49DAB300D274DC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D4922D962A49DAF700D274DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4081F832A4FFC7900F19529 /* CodeScanner in Frameworks */,
 				D412D4822A4845520026E164 /* NavigationBackport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,8 +144,10 @@
 		D412D46D2A48402B0026E164 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				D4922D912A49D61E00D274DC /* Home */,
 				D412D4872A485F800026E164 /* Onboarding */,
 				D412D46E2A4840360026E164 /* Welcome */,
+				D4922D942A49DAB300D274DC /* MainView.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -151,6 +167,7 @@
 				D412D48C2A486CFC0026E164 /* ImageTextField.swift */,
 				D412D4922A4877290026E164 /* MemoriaLogo.swift */,
 				D412D4942A48780E0026E164 /* CircularProgressView.swift */,
+				D44C81462A50141A008B52A4 /* BottomSheetView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -159,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				D412D4742A4842300026E164 /* Color.swift */,
+				D4081F842A5007CA00F19529 /* View.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -180,6 +198,16 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		D4922D912A49D61E00D274DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D4922D962A49DAF700D274DC /* HomeView.swift */,
+				D44C81482A501BED008B52A4 /* ScanQRView.swift */,
+				D44C814A2A5021DD008B52A4 /* JoinByCodeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +226,7 @@
 			name = Memoria;
 			packageProductDependencies = (
 				D412D4812A4845520026E164 /* NavigationBackport */,
+				D4081F822A4FFC7900F19529 /* CodeScanner */,
 			);
 			productName = Memoria;
 			productReference = D412D4562A4828010026E164 /* Memoria.app */;
@@ -229,6 +258,7 @@
 			mainGroup = D412D44D2A4828010026E164;
 			packageReferences = (
 				D412D4802A4845520026E164 /* XCRemoteSwiftPackageReference "NavigationBackport" */,
+				D4081F812A4FFC7900F19529 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = D412D4572A4828010026E164 /* Products */;
 			projectDirPath = "";
@@ -263,6 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44C814B2A5021DD008B52A4 /* JoinByCodeView.swift in Sources */,
+				D4081F852A5007CA00F19529 /* View.swift in Sources */,
 				D412D48D2A486CFC0026E164 /* ImageTextField.swift in Sources */,
 				D412D4682A4834EC0026E164 /* WelcomeView.swift in Sources */,
 				D412D4862A485EC50026E164 /* AppStateNavigation.swift in Sources */,
@@ -270,7 +302,11 @@
 				D412D4932A4877290026E164 /* MemoriaLogo.swift in Sources */,
 				D412D48B2A4864270026E164 /* OnboardingView.swift in Sources */,
 				D412D4912A48768F0026E164 /* LoadingView.swift in Sources */,
+				D4922D952A49DAB300D274DC /* MainView.swift in Sources */,
 				D412D4752A4842300026E164 /* Color.swift in Sources */,
+				D4922D972A49DAF700D274DC /* HomeView.swift in Sources */,
+				D44C81472A50141A008B52A4 /* BottomSheetView.swift in Sources */,
+				D44C81492A501BED008B52A4 /* ScanQRView.swift in Sources */,
 				D412D4952A48780E0026E164 /* CircularProgressView.swift in Sources */,
 				D412D4722A48416E0026E164 /* LargeButton.swift in Sources */,
 			);
@@ -477,6 +513,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D4081F812A4FFC7900F19529 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		D412D4802A4845520026E164 /* XCRemoteSwiftPackageReference "NavigationBackport" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/johnpatrickmorgan/NavigationBackport";
@@ -488,6 +532,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D4081F822A4FFC7900F19529 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4081F812A4FFC7900F19529 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
 		D412D4812A4845520026E164 /* NavigationBackport */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D412D4802A4845520026E164 /* XCRemoteSwiftPackageReference "NavigationBackport" */;

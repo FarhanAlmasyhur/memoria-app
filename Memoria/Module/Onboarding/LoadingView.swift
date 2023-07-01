@@ -6,37 +6,66 @@
 //
 
 import SwiftUI
+import NavigationBackport
 
 struct LoadingView: View {
     
-    @State var progress: Double = 0
-    
+    @StateObject private var appStateNavigation = AppStateNavigation.shared
+    @State private var progress: Double = 0
+    @State private var goToMainView: Bool = false
+
     var body: some View {
         ZStack {
             Color.blackAccent
                 .edgesIgnoringSafeArea(.all)
-            VStack(alignment: .center) {
+            VStack {
                 Spacer()
                 Spacer()
                 MemoriaLogo()
                 Spacer()
-                VStack {
-                    CircularProgressView(progress: progress)
-                        .frame(width: 32, height: 32)
-                    Text("Loading...")
-                        .font(.custom("Inter", fixedSize: 14))
-                        .fontWeight(.regular)
-                        .foregroundColor(Color(hex: "#FAFAFA"))
-                }
+                loadingView
                 Spacer()
             }
-        }.onAppear {
-            for _ in 0..<10 {
-                DispatchQueue.main.asyncAfter(wallDeadline: .now() + 1) {
-                    progress += 0.1
-                }
-            }
-        }.navigationBarHidden(true)
+        }
+        .onAppear {
+            startProgressAnimation()
+        }
+        .navigationBarHidden(true)
+        .nbNavigationDestination(isPresented: $goToMainView) {
+            MainView()
+        }
+    }
+
+    private var loadingView: some View {
+        VStack {
+            CircularProgressView(progress: progress)
+                .frame(width: 32, height: 32)
+            Text("Loading...")
+                .font(.custom("Inter", fixedSize: 14))
+                .fontWeight(.regular)
+                .foregroundColor(Color(hex: "#FAFAFA"))
+        }
+    }
+
+    private func startProgressAnimation() {
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 1) {
+            animateProgress()
+        }
+    }
+
+    private func animateProgress() {
+        if progress >= 1 {
+            goToMainView = true
+            return
+        }
+        
+        withAnimation(.easeInOut(duration: 0.1)) {
+            progress += 0.1
+        }
+        
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.1) {
+            animateProgress()
+        }
     }
 }
 

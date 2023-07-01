@@ -11,12 +11,16 @@ import NavigationBackport
 enum Screen: Hashable {
     case onboarding
     case loading
+    case main
 }
 
 
 class AppStateNavigation: ObservableObject {
     
     @Published var path = NBNavigationPath()
+    
+    @Published var showJoinByQR = false
+    @Published var showJoinByCode = false
     
     public static let shared = AppStateNavigation()
     

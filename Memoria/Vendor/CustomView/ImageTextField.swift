@@ -23,8 +23,9 @@ struct ImageTextField: View {
                     .foregroundColor(.black)
                     .frame(minWidth: 0, maxWidth: 30)
                     .frame(minHeight: 0, maxHeight: 33)
-                TextField ("", text: $text)
+                TextField("", text: $text)
                     .font(.custom("Inter", fixedSize: 15))
+                    .foregroundColor(.blackAccent)
                 
             }
             .padding([.top,.bottom], 2)

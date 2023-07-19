@@ -13,6 +13,7 @@ extension Color {
     public static let whiteAccent = Color(hex: "#E5E5E5")
     public static let blackBg = Color(hex: "#262626")
     public static let softWhite = Color(hex: "#FAFAFA")
+    public static let primaryWhite = Color(hex: "EEF2FF")
 }
 
 extension Color {

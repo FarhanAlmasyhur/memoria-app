@@ -42,6 +42,8 @@ struct WelcomeView: View {
                 LoadingView()
             case .main:
                 MainView()
+            case .createParty:
+                CameraView()
             }
         }
     }

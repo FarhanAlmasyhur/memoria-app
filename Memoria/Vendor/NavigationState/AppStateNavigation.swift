@@ -12,6 +12,7 @@ enum Screen: Hashable {
     case onboarding
     case loading
     case main
+    case createParty
 }
 
 

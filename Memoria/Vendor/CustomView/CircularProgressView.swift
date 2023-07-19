@@ -10,7 +10,7 @@ import SwiftUI
 struct CircularProgressView: View {
     let progress: Double
     let mainColor: Color = .purpleButton
-    let secondColor: Color = Color(hex: "#EEF2FF")
+    let secondColor: Color = .primaryWhite
     
     var body: some View {
         ZStack {

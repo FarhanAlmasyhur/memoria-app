@@ -24,7 +24,8 @@ struct MainView: View {
                     HomeView()
                         .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 } else if selectedTab == .party {
-                    EmptyView()
+                    PartyView()
+                        .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 } else if selectedTab == .profile {
                     EmptyView()
                 }
@@ -55,7 +56,7 @@ struct CustomTabView: View {
     @Binding var selectedTab: TabType
         
         var body: some View {
-            HStack(spacing: 30) {
+            HStack {
                 Spacer()
                 TabButton(type: .home, imageName: "house", title: "Home", selectedTab: $selectedTab)
                 TabButton(type: .party, imageName: "plus.circle", title: "Create Party", selectedTab: $selectedTab)

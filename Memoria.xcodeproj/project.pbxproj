@@ -32,8 +32,12 @@
 		D44C81472A50141A008B52A4 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C81462A50141A008B52A4 /* BottomSheetView.swift */; };
 		D44C81492A501BED008B52A4 /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C81482A501BED008B52A4 /* ScanQRView.swift */; };
 		D44C814B2A5021DD008B52A4 /* JoinByCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C814A2A5021DD008B52A4 /* JoinByCodeView.swift */; };
+		D46429C52A65732900A9B497 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46429C42A65732900A9B497 /* CameraView.swift */; };
+		D46EB3522A55AB45008F03A0 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3512A55AB45008F03A0 /* CustomSegmentedControl.swift */; };
+		D46EB3552A55AD26008F03A0 /* PartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EB3542A55AD26008F03A0 /* PartyView.swift */; };
 		D4922D952A49DAB300D274DC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4922D942A49DAB300D274DC /* MainView.swift */; };
 		D4922D972A49DAF700D274DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4922D962A49DAF700D274DC /* HomeView.swift */; };
+		D4F369062A6818A400355E60 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F369052A6818A400355E60 /* CameraPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,8 +66,12 @@
 		D44C81462A50141A008B52A4 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		D44C81482A501BED008B52A4 /* ScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRView.swift; sourceTree = "<group>"; };
 		D44C814A2A5021DD008B52A4 /* JoinByCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinByCodeView.swift; sourceTree = "<group>"; };
+		D46429C42A65732900A9B497 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		D46EB3512A55AB45008F03A0 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		D46EB3542A55AD26008F03A0 /* PartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyView.swift; sourceTree = "<group>"; };
 		D4922D942A49DAB300D274DC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D4922D962A49DAF700D274DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D4F369052A6818A400355E60 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,8 @@
 		D412D46D2A48402B0026E164 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				D46EB3582A55B108008F03A0 /* Camera */,
+				D46EB3532A55AD0E008F03A0 /* Party */,
 				D4922D912A49D61E00D274DC /* Home */,
 				D412D4872A485F800026E164 /* Onboarding */,
 				D412D46E2A4840360026E164 /* Welcome */,
@@ -168,6 +178,7 @@
 				D412D4922A4877290026E164 /* MemoriaLogo.swift */,
 				D412D4942A48780E0026E164 /* CircularProgressView.swift */,
 				D44C81462A50141A008B52A4 /* BottomSheetView.swift */,
+				D46EB3512A55AB45008F03A0 /* CustomSegmentedControl.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -196,6 +207,23 @@
 				D412D4902A48768F0026E164 /* LoadingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D46EB3532A55AD0E008F03A0 /* Party */ = {
+			isa = PBXGroup;
+			children = (
+				D46EB3542A55AD26008F03A0 /* PartyView.swift */,
+			);
+			path = Party;
+			sourceTree = "<group>";
+		};
+		D46EB3582A55B108008F03A0 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				D46429C42A65732900A9B497 /* CameraView.swift */,
+				D4F369052A6818A400355E60 /* CameraPreview.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		D4922D912A49D61E00D274DC /* Home */ = {
@@ -296,14 +324,18 @@
 				D44C814B2A5021DD008B52A4 /* JoinByCodeView.swift in Sources */,
 				D4081F852A5007CA00F19529 /* View.swift in Sources */,
 				D412D48D2A486CFC0026E164 /* ImageTextField.swift in Sources */,
+				D46EB3552A55AD26008F03A0 /* PartyView.swift in Sources */,
 				D412D4682A4834EC0026E164 /* WelcomeView.swift in Sources */,
+				D4F369062A6818A400355E60 /* CameraPreview.swift in Sources */,
 				D412D4862A485EC50026E164 /* AppStateNavigation.swift in Sources */,
 				D412D45A2A4828010026E164 /* MemoriaApp.swift in Sources */,
 				D412D4932A4877290026E164 /* MemoriaLogo.swift in Sources */,
 				D412D48B2A4864270026E164 /* OnboardingView.swift in Sources */,
 				D412D4912A48768F0026E164 /* LoadingView.swift in Sources */,
+				D46EB3522A55AB45008F03A0 /* CustomSegmentedControl.swift in Sources */,
 				D4922D952A49DAB300D274DC /* MainView.swift in Sources */,
 				D412D4752A4842300026E164 /* Color.swift in Sources */,
+				D46429C52A65732900A9B497 /* CameraView.swift in Sources */,
 				D4922D972A49DAF700D274DC /* HomeView.swift in Sources */,
 				D44C81472A50141A008B52A4 /* BottomSheetView.swift in Sources */,
 				D44C81492A501BED008B52A4 /* ScanQRView.swift in Sources */,
@@ -441,6 +473,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Memoria/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to capture photos within the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -471,6 +504,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Memoria/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to capture photos within the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

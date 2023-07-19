@@ -19,7 +19,10 @@ struct HomeView: View {
                     ZStack(alignment: .center) {
                         Image("img_scanqr")
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
+                            .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.7)
+                            .clipped()
+                            .cornerRadius(16)
                             .padding(.top, 30)
                         VStack {
                             Image("img_phone_scanqr")
@@ -42,7 +45,7 @@ struct HomeView: View {
                        
                     }
                     
-                    LargeButtonImage(title: "Join by Code", image: "123.rectangle", backgroundColor: Color(hex: "EEF2FF"), foregroundColor: .purpleButton) {
+                    LargeButtonImage(title: "Join by Code", image: "123.rectangle", backgroundColor: .primaryWhite, foregroundColor: .purpleButton) {
                         withAnimation(.interactiveSpring()) {
                             appStateNavigation.showJoinByCode = true
                         }

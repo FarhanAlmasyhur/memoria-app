@@ -14,6 +14,7 @@ extension Color {
     public static let blackBg = Color(hex: "#262626")
     public static let softWhite = Color(hex: "#FAFAFA")
     public static let primaryWhite = Color(hex: "EEF2FF")
+    public static let grayBg = Color(hex: "#9CA3AF66")
 }
 
 extension Color {

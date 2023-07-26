@@ -27,7 +27,8 @@ struct MainView: View {
                     PartyView()
                         .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 } else if selectedTab == .profile {
-                    EmptyView()
+                    ProfileView()
+                        .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 }
                 
                 Spacer()

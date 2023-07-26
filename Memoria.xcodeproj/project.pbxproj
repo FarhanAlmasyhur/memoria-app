@@ -10,7 +10,6 @@
 		D4081F832A4FFC7900F19529 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = D4081F822A4FFC7900F19529 /* CodeScanner */; };
 		D4081F852A5007CA00F19529 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4081F842A5007CA00F19529 /* View.swift */; };
 		D412D45A2A4828010026E164 /* MemoriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4592A4828010026E164 /* MemoriaApp.swift */; };
-		D412D45E2A4828020026E164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D412D45D2A4828020026E164 /* Assets.xcassets */; };
 		D412D4612A4828020026E164 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D412D4602A4828020026E164 /* Preview Assets.xcassets */; };
 		D412D4682A4834EC0026E164 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4672A4834EC0026E164 /* WelcomeView.swift */; };
 		D412D46C2A4840150026E164 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D412D46B2A4840130026E164 /* Inter-Regular.ttf */; };
@@ -29,6 +28,8 @@
 		D412D4912A48768F0026E164 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4902A48768F0026E164 /* LoadingView.swift */; };
 		D412D4932A4877290026E164 /* MemoriaLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4922A4877290026E164 /* MemoriaLogo.swift */; };
 		D412D4952A48780E0026E164 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4942A48780E0026E164 /* CircularProgressView.swift */; };
+		D44AAD8C2A715731006924B8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44AAD8B2A715731006924B8 /* ProfileView.swift */; };
+		D44AAD8D2A715912006924B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D412D45D2A4828020026E164 /* Assets.xcassets */; };
 		D44C81472A50141A008B52A4 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C81462A50141A008B52A4 /* BottomSheetView.swift */; };
 		D44C81492A501BED008B52A4 /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C81482A501BED008B52A4 /* ScanQRView.swift */; };
 		D44C814B2A5021DD008B52A4 /* JoinByCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C814A2A5021DD008B52A4 /* JoinByCodeView.swift */; };
@@ -63,6 +64,7 @@
 		D412D4902A48768F0026E164 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D412D4922A4877290026E164 /* MemoriaLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriaLogo.swift; sourceTree = "<group>"; };
 		D412D4942A48780E0026E164 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		D44AAD8B2A715731006924B8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D44C81462A50141A008B52A4 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		D44C81482A501BED008B52A4 /* ScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRView.swift; sourceTree = "<group>"; };
 		D44C814A2A5021DD008B52A4 /* JoinByCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinByCodeView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		D412D46D2A48402B0026E164 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				D44AAD8A2A715726006924B8 /* Profile */,
 				D46EB3582A55B108008F03A0 /* Camera */,
 				D46EB3532A55AD0E008F03A0 /* Party */,
 				D4922D912A49D61E00D274DC /* Home */,
@@ -207,6 +210,14 @@
 				D412D4902A48768F0026E164 /* LoadingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D44AAD8A2A715726006924B8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D44AAD8B2A715731006924B8 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		D46EB3532A55AD0E008F03A0 /* Party */ = {
@@ -309,8 +320,8 @@
 				D412D47D2A4842E10026E164 /* Inter-Bold.ttf in Resources */,
 				D412D47F2A4842FB0026E164 /* Inter-Thin.ttf in Resources */,
 				D412D4612A4828020026E164 /* Preview Assets.xcassets in Resources */,
+				D44AAD8D2A715912006924B8 /* Assets.xcassets in Resources */,
 				D412D46C2A4840150026E164 /* Inter-Regular.ttf in Resources */,
-				D412D45E2A4828020026E164 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +351,7 @@
 				D44C81472A50141A008B52A4 /* BottomSheetView.swift in Sources */,
 				D44C81492A501BED008B52A4 /* ScanQRView.swift in Sources */,
 				D412D4952A48780E0026E164 /* CircularProgressView.swift in Sources */,
+				D44AAD8C2A715731006924B8 /* ProfileView.swift in Sources */,
 				D412D4722A48416E0026E164 /* LargeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,7 +496,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.farhan.Memoria;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memoria.id;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -515,7 +527,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.farhan.Memoria;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memoria.id;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

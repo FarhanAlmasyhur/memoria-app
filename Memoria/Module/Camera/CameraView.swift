@@ -6,29 +6,54 @@
 //
 import SwiftUI
 
-struct CameraView: View {
-    @StateObject var camera = CameraModel()
+struct CameraView: View, KeyboardReadable {
+    
+    @StateObject var viewModel = CameraViewModel()
     @StateObject var appStateNavigation: AppStateNavigation = AppStateNavigation.shared
+    @State var settingsSheetViewHeight: CGFloat = .zero
+   
     
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 cameraPreviewStack(geometry: geometry)
+                Spacer()
                 shotDetailsStack()
+                Spacer()
             }
-            .background(Color.blackAccent)
+            .frame(width: geometry.size.width, height: geometry.size.height)
             .onAppear {
-                camera.checkAuthorizationStatus()
+                viewModel.checkAuthorizationStatus()
+                setSettingsSheetViewHeight(height: geometry.size.height * 0.5)
+            }.bottomSheet(isPresented: $viewModel.showSettingsSheet, height: settingsSheetViewHeight) {
+                SettingsSheetView(viewModel: viewModel, height: $settingsSheetViewHeight)
+            }.bottomSheet(isPresented: $viewModel.showShareQRSheet, height: geometry.size.height * 0.8, content: {
+                ShareQRSheetView(viewModel: viewModel)
+            })
+            .onReceive(keyboardPublisher) { keyboardVisible in
+                if keyboardVisible {
+                    setSettingsSheetViewHeight(height: geometry.size.height * 0.9)
+                } else {
+                    setSettingsSheetViewHeight(height: geometry.size.height * 0.5)
+                }
             }
         }
+        .edgesIgnoringSafeArea(.bottom)
+        .background(Color.blackAccent)
         .navigationBarHidden(true)
         .environmentObject(appStateNavigation)
+    }
+    
+    private func setSettingsSheetViewHeight(height: CGFloat) {
+        withAnimation {
+            self.settingsSheetViewHeight = height
+        }
     }
     
     private func cameraPreviewStack(geometry: GeometryProxy) -> some View {
         ZStack(alignment: .top) {
             ZStack(alignment: .bottom) {
-                CameraPreview(camera: camera)
+                CameraPreview(viewModel: viewModel)
                     .frame(height: geometry.size.height * 0.8)
                     .cornerRadius(24)
                 controlButtonsStack()
@@ -41,18 +66,18 @@ struct CameraView: View {
         HStack {
             Spacer()
             controlButton(imageName: "bolt.fill", action: {
-                camera.toggleFlashlight()
+                viewModel.toggleFlashlight()
             })
             Spacer()
             Color.white
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
                 .onTapGesture {
-                    camera.takePicture()
+                    viewModel.takePicture()
                 }
             Spacer()
             controlButton(imageName: "arrow.triangle.2.circlepath.camera.fill", action: {
-                camera.switchCamera()
+                viewModel.switchCamera()
             })
             Spacer()
         }
@@ -71,7 +96,7 @@ struct CameraView: View {
     
     private func dateLabel() -> some View {
         HStack {
-            Text("25 June")
+            Text("\(Date().toString(withFormat: "dd MMMM"))")
                 .font(.custom("Inter", fixedSize: 12))
                 .fontWeight(.semibold)
                 .foregroundColor(.softWhite)
@@ -115,14 +140,21 @@ struct CameraView: View {
     }
     
     private func settingsButton() -> some View {
-        HStack(spacing: 2) {
-            Text("Settings")
-                .foregroundColor(.white)
-                .font(.custom("Inter", fixedSize: 15))
-                .fontWeight(.regular)
-            Image(systemName: "gearshape")
-                .font(Font.system(size: 15, weight: .bold))
-                .foregroundColor(.white)
+        
+        Button {
+            withAnimation(.interactiveSpring()) {
+                viewModel.showSettingsSheet.toggle()
+            }
+        } label: {
+            HStack(spacing: 2) {
+                Text("Settings")
+                    .foregroundColor(.white)
+                    .font(.custom("Inter", fixedSize: 15))
+                    .fontWeight(.regular)
+                Image(systemName: "gearshape")
+                    .font(Font.system(size: 15, weight: .bold))
+                    .foregroundColor(.white)
+            }
         }
     }
 }

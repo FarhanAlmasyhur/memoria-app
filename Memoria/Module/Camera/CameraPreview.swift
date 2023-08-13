@@ -11,15 +11,15 @@ import Combine
 
 struct CameraPreview: UIViewRepresentable {
   
-    @ObservedObject var camera: CameraModel
+    @ObservedObject var viewModel: CameraViewModel
     
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: UIScreen.main.bounds)
-        camera.preview = AVCaptureVideoPreviewLayer(session: camera.session)
-        camera.preview.frame = view.frame
-        camera.preview.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(camera.preview)
-        camera.session.startRunning()
+        viewModel.preview = AVCaptureVideoPreviewLayer(session: viewModel.session)
+        viewModel.preview.frame = view.frame
+        viewModel.preview.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(viewModel.preview)
+        viewModel.session.startRunning()
         return view
     }
     
@@ -29,7 +29,7 @@ struct CameraPreview: UIViewRepresentable {
     
 }
 
-class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
+class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     
     @Published var isTaken: Bool = false
     @Published var session = AVCaptureSession()
@@ -38,7 +38,25 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     @Published var preview: AVCaptureVideoPreviewLayer!
     @Published var device: AVCaptureDevice?
     
+    @Published var showSettingsSheet: Bool = false
+    @Published var showShareQRSheet: Bool = false
+    
     private var cancellables: Set<AnyCancellable> = []
+    
+    override init() {
+        super.init()
+        setupBindings()
+    }
+    
+    private func setupBindings() {
+        $isTaken
+            .sink { [weak self] isTaken in
+                if isTaken {
+                    self?.startSession()
+                }
+            }
+            .store(in: &cancellables)
+    }
     
     func checkAuthorizationStatus() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
@@ -173,20 +191,5 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
         let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: deviceTypes, mediaType: .video, position: position).devices
         return availableDevices.first
     }
-
     
-    override init() {
-        super.init()
-        setupBindings()
-    }
-    
-    private func setupBindings() {
-        $isTaken
-            .sink { [weak self] isTaken in
-                if isTaken {
-                    self?.startSession()
-                }
-            }
-            .store(in: &cancellables)
-    }
 }

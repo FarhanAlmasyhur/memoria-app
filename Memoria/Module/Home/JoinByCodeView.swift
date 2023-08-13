@@ -15,16 +15,18 @@ struct JoinByCodeView: View {
     let height: CGFloat
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 10) {
             Text("Join by Code")
-                .font(.custom("Inter", fixedSize: 14))
+                .font(.custom("Inter", size: 14))
                 .foregroundColor(.softWhite)
                 .fontWeight(.medium)
+            
             HStack {
                 TextField("", text: $text)
-                    .font(.custom("Inter", fixedSize: 15))
+                    .font(.custom("Inter", size: 15))
                     .foregroundColor(.blackAccent)
                     .padding(7)
+                
                 Button(action: {
                     withAnimation(.easeIn) {
                         wrongCode = true
@@ -37,30 +39,27 @@ struct JoinByCodeView: View {
                         .foregroundColor(.black)
                         .animation(.default)
                 }
-            }.background(Color.white, alignment: .center)
-                .cornerRadius(6)
-            if wrongCode == false {
-                Text("Ask for party code to the host")
-                    .font(.custom("Inter", fixedSize: 14))
-                    .foregroundColor(Color(hex: "737373"))
-                    .fontWeight(.regular)
-            } else {
-                Text("Invalid code")
-                    .font(.custom("Inter", fixedSize: 14))
-                    .foregroundColor(.red)
-                    .fontWeight(.regular)
             }
+            .background(Color.white)
+            .cornerRadius(6)
             
-        }.frame(height: height)
-         .padding()
-         .background(Color.blackBg)
-         .onChange(of: text) { _ in
-             withAnimation(.easeIn) {
-                 wrongCode = false
-             }
-         }
+            Text(wrongCode ? "Invalid code" : "Ask for party code to the host")
+                .font(.custom("Inter", size: 14))
+                .foregroundColor(wrongCode ? .red : Color(hex: "737373"))
+                .fontWeight(.regular)
+            
+        }
+        .frame(height: height)
+        .padding()
+        .background(Color.blackBg)
+        .onChange(of: text) { _ in
+            withAnimation(.easeIn) {
+                wrongCode = false
+            }
+        }
     }
 }
+
 
 struct JoinByCodeView_Previews: PreviewProvider {
     static var previews: some View {

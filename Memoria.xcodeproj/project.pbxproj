@@ -51,6 +51,8 @@
 		D49658332A890ED600AF99C4 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49658322A890ED600AF99C4 /* Text.swift */; };
 		D49658362A891E7100AF99C4 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49658352A891E7100AF99C4 /* KeyboardReadable.swift */; };
 		D496583A2A89217C00AF99C4 /* ShareQRSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49658392A89217C00AF99C4 /* ShareQRSheetView.swift */; };
+		D498D8B02A9CD80400570E5A /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498D8AF2A9CD80400570E5A /* OnboardingViewModel.swift */; };
+		D498D8B22A9CD89000570E5A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498D8B12A9CD89000570E5A /* AuthService.swift */; };
 		D4F369062A6818A400355E60 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F369052A6818A400355E60 /* CameraPreview.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		D49658322A890ED600AF99C4 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		D49658352A891E7100AF99C4 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		D49658392A89217C00AF99C4 /* ShareQRSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareQRSheetView.swift; sourceTree = "<group>"; };
+		D498D8AF2A9CD80400570E5A /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		D498D8B12A9CD89000570E5A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D4F369052A6818A400355E60 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +160,7 @@
 		D412D4692A4835AE0026E164 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				D498D8AC2A9CD6FD00570E5A /* Firebase */,
 				D49658342A891E6300AF99C4 /* Helper */,
 				D412D4832A4845D20026E164 /* NavigationState */,
 				D412D4732A4842270026E164 /* Extension */,
@@ -237,7 +242,8 @@
 		D412D4872A485F800026E164 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				D412D48A2A4864270026E164 /* OnboardingView.swift */,
+				D498D8AE2A9CD7F600570E5A /* ViewModel */,
+				D498D8AD2A9CD7F200570E5A /* View */,
 				D412D4902A48768F0026E164 /* LoadingView.swift */,
 			);
 			path = Onboarding;
@@ -286,6 +292,30 @@
 				D49658352A891E7100AF99C4 /* KeyboardReadable.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		D498D8AC2A9CD6FD00570E5A /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D498D8B12A9CD89000570E5A /* AuthService.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D498D8AD2A9CD7F200570E5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D412D48A2A4864270026E164 /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D498D8AE2A9CD7F600570E5A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D498D8AF2A9CD80400570E5A /* OnboardingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +422,7 @@
 				D49658332A890ED600AF99C4 /* Text.swift in Sources */,
 				D412D4862A485EC50026E164 /* AppStateNavigation.swift in Sources */,
 				D412D45A2A4828010026E164 /* MemoriaApp.swift in Sources */,
+				D498D8B22A9CD89000570E5A /* AuthService.swift in Sources */,
 				D412D4932A4877290026E164 /* MemoriaLogo.swift in Sources */,
 				D412D48B2A4864270026E164 /* OnboardingView.swift in Sources */,
 				D412D4912A48768F0026E164 /* LoadingView.swift in Sources */,
@@ -400,6 +431,7 @@
 				D412D4752A4842300026E164 /* Color.swift in Sources */,
 				D49658362A891E7100AF99C4 /* KeyboardReadable.swift in Sources */,
 				D46429C52A65732900A9B497 /* CameraView.swift in Sources */,
+				D498D8B02A9CD80400570E5A /* OnboardingViewModel.swift in Sources */,
 				D4922D972A49DAF700D274DC /* HomeView.swift in Sources */,
 				D44C81472A50141A008B52A4 /* BottomSheetView.swift in Sources */,
 				D44C81492A501BED008B52A4 /* ScanQRView.swift in Sources */,

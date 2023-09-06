@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import MemojiKit
 
 struct OnboardingView: View {
     
-    @State private var fullname: String = ""
-    @State private var username: String = ""
+    @StateObject private var viewModel = OnboardingViewModel()
+    
     @State private var textFieldContainsSymbol: Bool = false
-
+    @State private var securePassword: Bool = true
+    
     @StateObject private var appStateNavigation = AppStateNavigation.shared
 
     var body: some View {
@@ -20,9 +22,13 @@ struct OnboardingView: View {
             Color.blackAccent
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                inputField(label: "Full Name", systemImageName: "person", text: $fullname)
                 
-                inputField(label: "Username", systemImageName: "at", text: $username)
+                inputField(label: "Full Name", systemImageName: "person", text: $viewModel.fullname)
+                
+                inputField(label: "Username", systemImageName: "at", text: $viewModel.username)
+                
+                secureField()
+                
                 if textFieldContainsSymbol {
                     HStack {
                         Text("Only alphabets and numerals are allowed")
@@ -44,7 +50,7 @@ struct OnboardingView: View {
                     .padding(.horizontal, 20)
                 
                 LargeButton(title: "Continue →", backgroundColor: .purpleButton, foregroundColor: .white) {
-                    if containsSymbol(text: username) || containsSymbol(text: fullname) {
+                    if containsSymbol(text: viewModel.username) || containsSymbol(text: viewModel.fullname) {
                         withAnimation(.easeIn) {
                             textFieldContainsSymbol = true
                         }
@@ -55,7 +61,7 @@ struct OnboardingView: View {
             }
         }
         .navigationBarHidden(true)
-        .onChange(of: [fullname, username]) { _ in
+        .onChange(of: [viewModel.fullname, viewModel.username]) { _ in
             withAnimation(.easeOut) {
                 textFieldContainsSymbol = false
             }
@@ -71,6 +77,39 @@ struct OnboardingView: View {
                 .padding(.leading, 20)
             ImageTextField(image: Image(systemName: systemImageName), text: text)
         }
+    }
+    
+    private func secureField() -> some View {
+        VStack(alignment: .leading) {
+            Text("Password")
+                .font(.custom("Inter", fixedSize: 14))
+                .foregroundColor(.whiteAccent)
+                .fontWeight(.medium)
+                .padding(.leading, 20)
+            HStack {
+                if securePassword {
+                    SecureField("", text: $viewModel.password)
+                        .font(.custom("Inter", fixedSize: 15))
+                        .foregroundColor(.blackAccent)
+                } else {
+                    TextField("", text: $viewModel.password)
+                        .font(.custom("Inter", fixedSize: 15))
+                        .foregroundColor(.blackAccent)
+                }
+                let imageName = securePassword ? "eye.fill" : "eye.slash.fill"
+                Image(systemName: imageName)
+                    .font(.system(size: 15))
+                    .onTapGesture {
+                        withAnimation {
+                            securePassword.toggle()
+                        }
+                    }
+            }.padding(.vertical, 10)
+                .background(Color.white, alignment: .center)
+                .cornerRadius(5)
+            .padding(.horizontal, 20)
+        }
+        
     }
 
     private func containsSymbol(text: String) -> Bool {

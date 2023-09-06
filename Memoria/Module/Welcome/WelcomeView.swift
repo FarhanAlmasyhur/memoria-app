@@ -23,6 +23,9 @@ struct WelcomeView: View {
             backgroundView
             VStack {
                 Image("img_phone_welcome")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 400)
                 MemoriaLogo()
                 Text("See memories through\ndifferent perspectives")
                     .font(.custom("Inter", fixedSize: 16))
